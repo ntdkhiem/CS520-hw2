@@ -1,6 +1,7 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ExpenseTrackerModel {
@@ -8,7 +9,7 @@ public class ExpenseTrackerModel {
   private List<Transaction> transactions;
 
   public ExpenseTrackerModel() {
-    this.transactions = new ArrayList<>(); 
+    this.transactions = new ArrayList<>();
   }
 
   public void addTransaction(Transaction t) {
@@ -19,8 +20,9 @@ public class ExpenseTrackerModel {
     this.transactions.remove(t);
   }
 
+  // return immutable list of transactions
   public List<Transaction> getTransactions() {
-    return this.transactions;
+    return Collections.unmodifiableList(new ArrayList<>(this.transactions));
   }
 
 }
