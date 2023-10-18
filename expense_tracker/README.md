@@ -1,6 +1,6 @@
 # hw1- Manual Review
 
-The homework will be based on this project named "Expense Tracker",where users will be able to add/remove daily transaction. 
+The homework will be based on this project named "Expense Tracker",where users will be able to add/remove daily transaction.
 
 ## Compile
 
@@ -11,7 +11,15 @@ javac ExpenseTrackerApp.java
 java ExpenseTracker
 ```
 
-You should be able to view the GUI of the project upon successful compilation. 
+You should be able to view the GUI of the project upon successful compilation.
 
 ## Java Version
 This code is compiled with ```openjdk 17.0.7 2023-04-18```. Please update your JDK accordingly if you face any incompatibility issue.
+
+## Features
+
+- Input validation for both amount and category.
+  - $0 < amount \le 1000$
+  - $category \in \text{[food, travel, bills, entertainment, other]}$
+- Add/Remove a transaction.
+- Each added transaction will have an associated timestamp.
