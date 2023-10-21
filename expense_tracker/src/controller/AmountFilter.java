@@ -1,15 +1,15 @@
+package controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import controller.InputValidation;
 import model.Transaction;
 
-public class CategoryFilter implements TransactionFilterInterface {
-    private String categoryToFilter;
+public class AmountFilter implements TransactionFilterInterface{
+    private double amountToFilter;
 
-    public CategoryFilter(String categoryToFilter) {
-        if (InputValidation.isValidCategory(categoryToFilter)) {
-            this.categoryToFilter = categoryToFilter;
+    public AmountFilter(double amountToFilter) {
+        if (InputValidation.isValidAmount(amountToFilter)) {
+            this.amountToFilter = amountToFilter;
         }
     }
 
@@ -17,11 +17,10 @@ public class CategoryFilter implements TransactionFilterInterface {
     public List<Transaction> filter(List<Transaction> transactions) {
         List<Transaction> filteredTransactions = new ArrayList<Transaction>();
         for (Transaction transaction : transactions) {
-            if (transaction.getCategory().equals(categoryToFilter)) {
+            if (transaction.getAmount() == amountToFilter) {
                 filteredTransactions.add(transaction);
             }
         }
         return filteredTransactions;
     }
 }
-

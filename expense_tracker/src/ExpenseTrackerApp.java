@@ -34,6 +34,17 @@ public class ExpenseTrackerApp {
       }
     });
 
+    // Handle category filter button clicks
+    view.getFilterTransactionBtn().addActionListener(e -> {
+      // Get category from view
+      System.out.println("Filtering by category");
+      String category = view.getCategoryField();
+      System.out.println("Category: " + category);
+      
+      // Call controller to apply category filter
+      Boolean filtered = controller.applyCategoryFilter(category);
+    });
+
   }
 
 }
