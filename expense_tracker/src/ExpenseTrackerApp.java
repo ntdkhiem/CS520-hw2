@@ -10,7 +10,7 @@ import controller.InputValidation;
 public class ExpenseTrackerApp {
 
   public static void main(String[] args) {
-    
+
     // Create MVC components
     ExpenseTrackerModel model = new ExpenseTrackerModel();
     ExpenseTrackerView view = new ExpenseTrackerView();
@@ -24,10 +24,10 @@ public class ExpenseTrackerApp {
       // Get transaction data from view
       double amount = view.getAmountField();
       String category = view.getCategoryField();
-      
+
       // Call controller to add transaction
       boolean added = controller.addTransaction(amount, category);
-      
+
       if (!added) {
         JOptionPane.showMessageDialog(view, "Invalid amount or category entered");
         view.toFront();
@@ -36,13 +36,28 @@ public class ExpenseTrackerApp {
 
     // Handle category filter button clicks
     view.getFilterTransactionBtn().addActionListener(e -> {
-      // Get category from view
-      System.out.println("Filtering by category");
-      String category = view.getCategoryField();
-      System.out.println("Category: " + category);
-      
-      // Call controller to apply category filter
-      Boolean filtered = controller.applyCategoryFilter(category);
+      // Get filter options from user
+      String[] options = { "Amount", "Category" };
+      int choice = JOptionPane.showOptionDialog(view, "Filter by:", "Filter Options", JOptionPane.DEFAULT_OPTION,
+          JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
+
+      // Get filter data from view
+      double amount = 0;
+      String category = "";
+      switch (choice) {
+        case 0:
+          amount = Double.parseDouble(JOptionPane.showInputDialog(view, "Enter amount to filter by:"));
+          // Call controller to apply filter
+          controller.applyFilter("amount", amount);
+          break;
+        case 1:
+          category = JOptionPane.showInputDialog(view, "Enter category to filter by:");
+          // Call controller to apply filter
+          controller.applyFilter("category", category);
+          break;
+        default:
+          break;
+      }
     });
 
   }
