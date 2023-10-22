@@ -176,6 +176,10 @@ public class ExpenseTrackerView extends JFrame {
     return filter;
   }
 
+  // Add highlightFilteredRows method
+  // Takes in a list of filtered transactions and a color to highlight the rows
+  // Creates a new TableCellRenderer and overrides the
+  // getTableCellRendererComponent method to highlight the filtered rows
   public void highlightFilteredRows(List<Transaction> filteredTransactions, Color color) {
     System.out.println("Highlighting filtered rows: highlightFilteredRows();");
     transactionsTable.setDefaultRenderer(Object.class, new DefaultTableCellRenderer() {

@@ -40,6 +40,10 @@ public class ExpenseTrackerModel {
     return filteredTransactions;
   }
 
+  // Add applyFilter method
+  // Takes in filterType and filterConditionObject and returns a list of filtered
+  // transactions
+  // Use the TransactionFilterInterface to filter the transactions
   public List<Transaction> applyFilter(String filterType, Object filterConditionObject) {
     TransactionFilterInterface filter;
     if ("category".equals(filterType)) {
@@ -52,12 +56,9 @@ public class ExpenseTrackerModel {
       List<Transaction> filteredTransactions = filter.filter(this.transactions);
       System.out.println("Filtered Transactions in Controller" + filteredTransactions.size());
       return filteredTransactions;
-      // view.highlightFilteredRows(filteredTransactions, new java.awt.Color(173, 255,
-      // 168));
     } else {
       throw new IllegalArgumentException("Invalid filter type");
     }
-    // view.highlightFilteredRows(filteredTransactions);
   }
 
 }

@@ -34,7 +34,7 @@ public class ExpenseTrackerApp {
       }
     });
 
-    // Handle category filter button clicks
+    // Handle filter transaction button clicks
     view.getFilterTransactionBtn().addActionListener(e -> {
       // Get filter options from user
       String[] options = { "Amount", "Category" };
