@@ -1,0 +1,83 @@
+commit ba72879cd61813357b542e5272e92eb34f8f0d66
+Author: Rishik Janaswamy <rishikjanaswamy@vl965-172-31-72-128.wireless.umass.edu>
+Date:   Sat Oct 21 21:36:28 2023 -0400
+
+    Updated read.me and added test cases
+
+commit f891a8738922e34f8b19a1f50ea853652e5b2946
+Author: Rishik Janaswamy <rishikjanaswamy@vl965-172-31-72-128.wireless.umass.edu>
+Date:   Sat Oct 21 21:15:36 2023 -0400
+
+    Added filter features
+
+commit d013810e1f3799f006c9774853eeff0e104de961
+Author: rishik-j <rishikjanaswamy999@gmail.com>
+Date:   Sat Oct 21 16:46:35 2023 -0400
+
+    Working on implementing filtering
+
+commit cba373ef77de70de8c7fd8c402080eaa0bd0ec8a
+Author: Khiem Nguyen <ppkhiemnguyen@gmail.com>
+Date:   Thu Oct 19 13:05:21 2023 -0400
+
+    add filtering for category and amount.
+
+commit c1ed6faeb4cb3356833d7b5a25111a34dc043945
+Author: Khiem Nguyen <ppkhiemnguyen@gmail.com>
+Date:   Wed Oct 18 18:57:54 2023 -0400
+
+    Apply changes to prevent external modification in "Transaction"
+
+commit f21d5269fe1ddad94fac212ffee5026f5bd6218d
+Author: Khiem Nguyen <ppkhiemnguyen@gmail.com>
+Date:   Wed Oct 18 18:55:08 2023 -0400
+
+    Apply immutability on the list of transactions when the getter method is invoked.
+
+commit e35b599c655ddb2fbe29cddc7e290410dc8da8cf
+Author: Khiem Nguyen <ppkhiemnguyen@gmail.com>
+Date:   Wed Oct 18 18:52:30 2023 -0400
+
+    Apply encapsulation for the list of transactions
+
+commit e0137dacfb94058e02c8d1a5185fe751720a6d0e
+Author: Khiem Nguyen <ppkhiemnguyen@gmail.com>
+Date:   Wed Oct 18 18:47:53 2023 -0400
+
+    generate javadoc
+
+commit b4b98947a907d70df76fa3332c6c4687a591f48a
+Author: Khiem Nguyen <ppkhiemnguyen@gmail.com>
+Date:   Wed Oct 18 18:31:19 2023 -0400
+
+    document current features
+
+commit b21da9fb7fd47c25881d7fc014a932365cb1552b
+Author: Mahbuba Tasmin <tasmin153@gmail.com>
+Date:   Sat Sep 2 02:42:57 2023 -0400
+
+    Build file update
+
+commit ccabaffc7ff1b7098979a63fcbadf48bc04915c3
+Author: Mahbuba Tasmin <tasmin153@gmail.com>
+Date:   Tue Aug 29 14:49:22 2023 -0400
+
+    File Update
+
+commit 2574c71001a74c29f01f4a84fa99f450158f2f10
+Author: Mahbuba Tasmin <tasmin153@gmail.com>
+Date:   Wed Aug 9 14:11:14 2023 -0400
+
+    Total Cost and Serial update
+
+commit d29d2c8acb4145ce700e0456ccc334da0cad3dc2
+Author: Mahbuba Tasmin <tasmin153@gmail.com>
+Date:   Wed Aug 9 12:54:46 2023 -0400
+
+    HW2 template files
+
+commit 6a51d8019c39a33d581ce078ae8887a022ee806d
+Author: Mahbuba Tasmin <tasmin153@gmail.com>
+Date:   Tue Aug 8 21:48:41 2023 -0400
+
+    Initial commit
